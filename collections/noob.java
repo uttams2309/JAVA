@@ -86,10 +86,43 @@ public class noob {
         * sorting algorithm uses this compare method of Comparator to comapre 2 variables, and decide whether to swap the variables or not.
         * Method returns : 1 , 0, -1 (greater, equal, lesser)
         * Mostly in algorithm, if this method return 1, it swap the values.
+        * 2. Comparable -> implement compareTo
+        * int compareTo (T obj2);
+        * Sorting algorithm uses this compareTo method of Comparator to compare 2 variables, and decide whether to swap the variables or not.
+        * Arrays.sort(carArray, (Car obj1, Car obj2)->obj2.carType.compareTo(obj1.carType))
+        *
+        *  can implment menthod in Car class itself, and pass it Collection.sort(car, new Car())
+        * public class CarNameComparator implements Comparator<Car> {
+        *   @Override
+        *   public int compare(Car o1, Car o2){
+        *       return o2.carName.compareTo(o1.carName);
+        * }
+        * }
+        * Collections.sort(cars, new CarNameComparator());
         * */
 
          Integer[] arr = {2, 4, 2, 2, 4};
          Arrays.sort(arr, (Integer val1, Integer val2) -> val2.compareTo(val1));
+
+        /*
+        * Deque -> double ended queue
+        * it can be used to implment stack and queue both :
+        * for this push(), and pop() methods are available
+        * push() -> internally calls addFirst()
+        * pop() -> internally calls removeFirst()
+        *
+        * */
+
+
+
+        /*
+        * List is an ordered collcetion of objects, in which duplciate values can be stored.
+        * How it differs from queue?
+        * insertion/removal/access can only happen either at start or end of queue.
+        * while in list, data can be inserted, removed or access from anywhere.
+        * in list, user can decide, where to insert or access using index.
+        *
+        * */
 
     }
 }
